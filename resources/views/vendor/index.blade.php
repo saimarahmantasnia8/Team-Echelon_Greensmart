@@ -1,4 +1,4 @@
-@extends('vendor.vendor_dashboard')
+@extends('vendor.seller_dashboard')
 @section('vendor')
 
 <div class="page-content">
