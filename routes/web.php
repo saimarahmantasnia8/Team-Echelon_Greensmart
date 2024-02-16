@@ -55,6 +55,9 @@ Route::middleware(['auth','role:vendor'])->group(function() {
      Route::post('/vendor/update/password', [VendorController::class, 'VendorUpdatePassword'])->name('vendor.update.password');
     });
 
+Route::get('/admin/login', [AdminController::class, 'AdminLogin']);
+Route::get('/vendor/login', [VendorController::class, 'VendorLogin']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
